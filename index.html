@@ -67,7 +67,7 @@
     //Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera( 45, box.width/box.height, 0.9, 1000 );
-    camera.position.z = -5;
+    camera.position.z =5;
 
 
     //GLTFLoader
@@ -93,11 +93,20 @@
 
 
     //lights
-    const light = new THREE.AmbientLight( 0xffffff );
+    const light = new THREE.AmbientLight( 0xffffff , 1.6);
     scene.add( light );
-    const light1 = new THREE.PointLight( 0xffffff, .8, 1000 );
-    light1.position.set( 10, -50, -10 );
-    scene.add( light1 );
+    const light0 = new THREE.PointLight( 0xffffff, .5, 1000 );
+    light0.position.set( -10, -4, 4 );
+    scene.add(light0);
+    const light1 = new THREE.PointLight( 0xffffff, .2, 1000 );
+    light1.position.set( 10, -10, 4 );
+    scene.add(light1);
+    const light2 = new THREE.PointLight( 0xffffff, .5, 1000 );
+    light2.position.set( 10, 4, -4 );
+    scene.add(light2);
+    const light3 = new THREE.PointLight( 0xffffff, .2, 1000 );
+    light3.position.set( -10, 10, -5 );
+    scene.add(light3);
 
     // loader.load( 'https://cdn1231.fra1.digitaloceanspaces.com/BeFC/cell.glb', function ( cell ) {
     loader.load( 'cell.glb', function ( cell ) {
@@ -145,8 +154,7 @@
     //Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera( 45, box.width/box.height, 0.9, 1000 );
-    camera.position.z = -5;
-
+    camera.position.z = 5;
 
     //GLTFLoader
     import {GLTFLoader} from 'https://cdn.skypack.dev/pin/three@v0.133.1-a8rkd0QTHl2tMZXZJAEw/dist=es2020,mode=imports/unoptimized/examples/jsm/loaders/GLTFLoader.js';
@@ -169,13 +177,21 @@
     //     render()
     // }
 
-
     //lights
-    const light = new THREE.AmbientLight( 0xffffff );
+    const light = new THREE.AmbientLight( 0xffffff , 3);
     scene.add( light );
-    const light1 = new THREE.PointLight( 0xffffff, .8, 1000 );
-    light1.position.set( 10, -50, -10 );
-    scene.add( light1 );
+    const light0 = new THREE.PointLight( 0xffffff, 5, 1000 );
+    light0.position.set( -10, -4, 4 );
+    scene.add(light0);
+    const light1 = new THREE.PointLight( 0xffffff, 5, 1000 );
+    light1.position.set( 10, -10, 4 );
+    scene.add(light1);
+    const light2 = new THREE.PointLight( 0xffffff, 4, 1000 );
+    light2.position.set( 10, 4, -4 );
+    scene.add(light2);
+    const light3 = new THREE.PointLight( 0xffffff, 4, 1000 );
+    light3.position.set( -10, 10, -5 );
+    scene.add(light3);
 
     // loader.load( 'https://cdn1231.fra1.digitaloceanspaces.com/BeFC/cell.glb', function ( cell ) {
     loader.load( 'platform.glb', function ( cell ) {
