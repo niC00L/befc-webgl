@@ -25,6 +25,7 @@
             width: 500px;
             height: 500px;
         }
+        h2 {text-align: center;}
     </style>
 </head>
 <body>
@@ -49,8 +50,10 @@
     </svg>
 </div>
 <div id="befcCellContainer" class="canvas-holder">
+    <h2>Orbit controls</h2>
 </div>
 <div id="befcPlatformContainer" class="canvas-holder">
+    <h2>Trackball controls</h2>
 </div>
 
 <!--Module for befc cell-->
@@ -161,11 +164,11 @@
     const loader = new GLTFLoader();
 
     //Controls
-    import {OrbitControls} from 'https://cdn.skypack.dev/pin/three@v0.133.1-a8rkd0QTHl2tMZXZJAEw/dist=es2020,mode=imports/unoptimized/examples/jsm/controls/OrbitControls.js';
-    const controls = new OrbitControls( camera, renderer.domElement );
-    // import {TrackballControls} from 'https://cdn.skypack.dev/pin/three@v0.133.1-a8rkd0QTHl2tMZXZJAEw/dist=es2020,mode=imports/unoptimized/examples/jsm/controls/TrackballControls.js';
-    // const controls = new TrackballControls( camera, renderer.domElement );
-    controls.rotateSpeed = 0.8;
+    // import {OrbitControls} from 'https://cdn.skypack.dev/pin/three@v0.133.1-a8rkd0QTHl2tMZXZJAEw/dist=es2020,mode=imports/unoptimized/examples/jsm/controls/OrbitControls.js';
+    // const controls = new OrbitControls( camera, renderer.domElement );
+    import {TrackballControls} from 'https://cdn.skypack.dev/pin/three@v0.133.1-a8rkd0QTHl2tMZXZJAEw/dist=es2020,mode=imports/unoptimized/examples/jsm/controls/TrackballControls.js';
+    const controls = new TrackballControls( camera, renderer.domElement );
+    controls.rotateSpeed = 2.2;
     controls.noZoom = true;
     controls.noPan = true;
 
